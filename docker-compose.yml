@@ -1,8 +1,8 @@
 version: '3'
 
 services:
-  hotel-back-app:
-    container_name: hotel-back-app
+  ms-hotel:
+    container_name: ms-hotel
     build: .  # Build desde el Dockerfile en el mismo directorio
     image: hotel-back  # Nombre de la imagen generada
     ports:
