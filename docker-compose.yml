@@ -1,0 +1,29 @@
+version: '3'
+
+services:
+  hotel-back-app:
+    container_name: hotel-back-app
+    build: .  # Build desde el Dockerfile en el mismo directorio
+    image: hotel-back  # Nombre de la imagen generada
+    ports:
+      - 8080:8080
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:mysql://db-hotel:3306/ms_hotel
+      - SPRING_DATASOURCE_USERNAME=kestrel
+      - SPRING_DATASOURCE_PASSWORD=kestrel
+    depends_on:
+      - db-hotel
+
+  db-hotel:
+    container_name: db-hotel
+    image: mysql:8.0.33
+    restart: unless-stopped
+    environment:
+      MYSQL_DATABASE: ms_hotel
+      MYSQL_USER: kestrel
+      MYSQL_PASSWORD: kestrel
+      MYSQL_ROOT_PASSWORD: root
+    ports:
+      - 3306:3306
+    expose:
+      - 3306
