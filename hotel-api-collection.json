@@ -1,0 +1,1640 @@
+{
+  "info": {
+    "_postman_id": "12345-abcde-67890",
+    "name": "Hotel API",
+    "description": "Collection of Hotel API endpoints",
+    "version": "1.0",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    
+  },
+  "item": [
+    {
+      "name": "Categories",
+      "item": [
+        {
+          "name": "Get all categories",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "http://localhost:8080/hotel/api/categories",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "hotel",
+                "api",
+                "categories"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Find category by name",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "http://localhost:8080/hotel/api/categories/name/:name",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "hotel",
+                "api",
+                "categories",
+                "name",
+                ":name"
+              ]
+            },
+            "description": "Replace `:name` with the category name"
+          },
+          "response": []
+        },
+        {
+          "name": "Get category by ID",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "http://localhost:8080/hotel/api/categories/:id",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "hotel",
+                "api",
+                "categories",
+                ":id"
+              ]
+            },
+            "description": "Replace `:id` with the category ID"
+          },
+          "response": []
+        },
+        {
+          "name": "Create new category",
+          "request": {
+            "method": "POST",
+            "url": {
+              "raw": "http://localhost:8080/hotel/api/categories",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "hotel",
+                "api",
+                "categories"
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"New Category\",\n  \"description\": \"Description of the new category\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "description": "Create a new category. Provide the category name and description in the request body."
+          },
+          "response": []
+        },
+        {
+          "name": "Update category by ID",
+          "request": {
+            "method": "PUT",
+            "url": {
+              "raw": "http://localhost:8080/hotel/api/categories/:id",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "hotel",
+                "api",
+                "categories",
+                ":id"
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Updated Category\",\n  \"description\": \"Updated description\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "description": "Update an existing category. Replace `:id` with the category ID and provide the new name and description."
+          },
+          "response": []
+        },
+        {
+          "name": "Delete category by ID",
+          "request": {
+            "method": "DELETE",
+            "url": {
+              "raw": "http://localhost:8080/hotel/api/categories/:id",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "hotel",
+                "api",
+                "categories",
+                ":id"
+              ]
+            },
+            "description": "Delete a category by ID. Replace `:id` with the category ID."
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Guests",
+      "item": [
+        {
+          "name": "Get All Guests",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/hotel/api/guests",
+              "host": [
+                "http://localhost:8080"
+              ],
+              "path": [
+                "hotel",
+                "api",
+                "guests"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Find Guests By Patient First Name",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/hotel/api/guests/patientFirstName/:firstName",
+              "host": [
+                "http://localhost:8080"
+              ],
+              "path": [
+                "hotel",
+                "api",
+                "guests",
+                "patientFirstName",
+                ":firstName"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Find Guests By Room Number",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/hotel/api/guests/roomNumber/:roomNumber",
+              "host": [
+                "http://localhost:8080"
+              ],
+              "path": [
+                "hotel",
+                "api",
+                "guests",
+                "roomNumber",
+                ":roomNumber"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Find Guests By Entry Date After",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/hotel/api/guests/entryDateAfter/:entryDate",
+              "host": [
+                "http://localhost:8080"
+              ],
+              "path": [
+                "hotel",
+                "api",
+                "guests",
+                "entryDateAfter",
+                ":entryDate"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Find Guests By Exit Date Before",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/hotel/api/guests/exitDateBefore/:exitDate",
+              "host": [
+                "http://localhost:8080"
+              ],
+              "path": [
+                "hotel",
+                "api",
+                "guests",
+                "exitDateBefore",
+                ":exitDate"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Find Guests By Patient ID",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/hotel/api/guests/patientId/:patientId",
+              "host": [
+                "http://localhost:8080"
+              ],
+              "path": [
+                "hotel",
+                "api",
+                "guests",
+                "patientId",
+                ":patientId"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Guest By ID",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/hotel/api/guests/:id",
+              "host": [
+                "http://localhost:8080"
+              ],
+              "path": [
+                "hotel",
+                "api",
+                "guests",
+                ":id"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Create Guest",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\"firstName\":\"John\", \"lastName\":\"Doe\", \"roomNumber\":\"101\", \"entryDate\":\"2024-11-14\", \"exitDate\":\"2024-11-20\"}"
+            },
+            "url": {
+              "raw": "http://localhost:8080/hotel/api/guests",
+              "host": [
+                "http://localhost:8080"
+              ],
+              "path": [
+                "hotel",
+                "api",
+                "guests"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Update Guest",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\"firstName\":\"Jane\", \"lastName\":\"Doe\", \"roomNumber\":\"102\", \"entryDate\":\"2024-11-14\", \"exitDate\":\"2024-11-21\"}"
+            },
+            "url": {
+              "raw": "http://localhost:8080/hotel/api/guests/:id",
+              "host": [
+                "http://localhost:8080"
+              ],
+              "path": [
+                "hotel",
+                "api",
+                "guests",
+                ":id"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Delete Guest",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/hotel/api/guests/:id",
+              "host": [
+                "http://localhost:8080"
+              ],
+              "path": [
+                "hotel",
+                "api",
+                "guests",
+                ":id"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Packages",
+      "item": [
+        {
+          "name": "Get All Packages",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/hotel/api/packages",
+              "host": [
+                "http://localhost:8080"
+              ],
+              "path": [
+                "hotel",
+                "api",
+                "packages"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Find Packages By Name",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/hotel/api/packages/name/:name",
+              "host": [
+                "http://localhost:8080"
+              ],
+              "path": [
+                "hotel",
+                "api",
+                "packages",
+                "name",
+                ":name"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Find Packages By Min Cost",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/hotel/api/packages/minCost/:minCost",
+              "host": [
+                "http://localhost:8080"
+              ],
+              "path": [
+                "hotel",
+                "api",
+                "packages",
+                "minCost",
+                ":minCost"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Find Packages By Name Containing",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/hotel/api/packages/nameContaining/:name",
+              "host": [
+                "http://localhost:8080"
+              ],
+              "path": [
+                "hotel",
+                "api",
+                "packages",
+                "nameContaining",
+                ":name"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Find Packages By Total Cost Less Than",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/hotel/api/packages/totalCostLessThan/:cost",
+              "host": [
+                "http://localhost:8080"
+              ],
+              "path": [
+                "hotel",
+                "api",
+                "packages",
+                "totalCostLessThan",
+                ":cost"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Find Packages By Days Between",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/hotel/api/packages/daysBetween/:startDays/:endDays",
+              "host": [
+                "http://localhost:8080"
+              ],
+              "path": [
+                "hotel",
+                "api",
+                "packages",
+                "daysBetween",
+                ":startDays",
+                ":endDays"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Package By ID",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/hotel/api/packages/:id",
+              "host": [
+                "http://localhost:8080"
+              ],
+              "path": [
+                "hotel",
+                "api",
+                "packages",
+                ":id"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Create Package",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\"name\":\"Luxury Package\", \"cost\":500.00, \"totalCost\":700.00, \"days\":5}"
+            },
+            "url": {
+              "raw": "http://localhost:8080/hotel/api/packages",
+              "host": [
+                "http://localhost:8080"
+              ],
+              "path": [
+                "hotel",
+                "api",
+                "packages"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Update Package",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\"name\":\"Updated Luxury Package\", \"cost\":600.00, \"totalCost\":800.00, \"days\":6}"
+            },
+            "url": {
+              "raw": "http://localhost:8080/hotel/api/packages/:id",
+              "host": [
+                "http://localhost:8080"
+              ],
+              "path": [
+                "hotel",
+                "api",
+                "packages",
+                ":id"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Delete Package",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/hotel/api/packages/:id",
+              "host": [
+                "http://localhost:8080"
+              ],
+              "path": [
+                "hotel",
+                "api",
+                "packages",
+                ":id"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Package Patients",
+      "item": [
+        {
+          "name": "Get All Package Patients",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/hotel/api/packagePatients",
+              "host": [
+                "http://localhost:8080"
+              ],
+              "path": [
+                "hotel",
+                "api",
+                "packagePatients"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Find Package Patients By Package Name",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/hotel/api/packagePatients/packageName/:packageName",
+              "host": [
+                "http://localhost:8080"
+              ],
+              "path": [
+                "hotel",
+                "api",
+                "packagePatients",
+                "packageName",
+                ":packageName"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Find Package Patients By Patient First Name",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/hotel/api/packagePatients/patientFirstName/:patientFirstName",
+              "host": [
+                "http://localhost:8080"
+              ],
+              "path": [
+                "hotel",
+                "api",
+                "packagePatients",
+                "patientFirstName",
+                ":patientFirstName"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Find Package Patients By Patient ID",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/hotel/api/packagePatients/patientId/:patientId",
+              "host": [
+                "http://localhost:8080"
+              ],
+              "path": [
+                "hotel",
+                "api",
+                "packagePatients",
+                "patientId",
+                ":patientId"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Find Package Patients By Package ID",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/hotel/api/packagePatients/packageId/:packageId",
+              "host": [
+                "http://localhost:8080"
+              ],
+              "path": [
+                "hotel",
+                "api",
+                "packagePatients",
+                "packageId",
+                ":packageId"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Find Package Patients By Purchase Date Between",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/hotel/api/packagePatients/purchaseDateBetween/:startDate/:endDate",
+              "host": [
+                "http://localhost:8080"
+              ],
+              "path": [
+                "hotel",
+                "api",
+                "packagePatients",
+                "purchaseDateBetween",
+                ":startDate",
+                ":endDate"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Package Patient By ID",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/hotel/api/packagePatients/:id",
+              "host": [
+                "http://localhost:8080"
+              ],
+              "path": [
+                "hotel",
+                "api",
+                "packagePatients",
+                ":id"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Create Package Patient",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\"packageName\":\"VIP Package\", \"patientFirstName\":\"John\", \"patientLastName\":\"Doe\", \"purchaseDate\":\"2024-11-01\"}"
+            },
+            "url": {
+              "raw": "http://localhost:8080/hotel/api/packagePatients",
+              "host": [
+                "http://localhost:8080"
+              ],
+              "path": [
+                "hotel",
+                "api",
+                "packagePatients"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Update Package Patient",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\"packageName\":\"Updated VIP Package\", \"patientFirstName\":\"John\", \"patientLastName\":\"Doe\", \"purchaseDate\":\"2024-11-02\"}"
+            },
+            "url": {
+              "raw": "http://localhost:8080/hotel/api/packagePatients/:id",
+              "host": [
+                "http://localhost:8080"
+              ],
+              "path": [
+                "hotel",
+                "api",
+                "packagePatients",
+                ":id"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Delete Package Patient",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/hotel/api/packagePatients/:id",
+              "host": [
+                "http://localhost:8080"
+              ],
+              "path": [
+                "hotel",
+                "api",
+                "packagePatients",
+                ":id"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Package Services",
+      "item": [
+        {
+          "name": "Get All Package Services",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/hotel/api/packageServices",
+              "host": [
+                "http://localhost:8080"
+              ],
+              "path": [
+                "hotel",
+                "api",
+                "packageServices"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Find Package Services By Package Name",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/hotel/api/packageServices/packageName/:packageName",
+              "host": [
+                "http://localhost:8080"
+              ],
+              "path": [
+                "hotel",
+                "api",
+                "packageServices",
+                "packageName",
+                ":packageName"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Find Package Services By Service Name",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/hotel/api/packageServices/serviceName/:serviceName",
+              "host": [
+                "http://localhost:8080"
+              ],
+              "path": [
+                "hotel",
+                "api",
+                "packageServices",
+                "serviceName",
+                ":serviceName"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Find Package Services By Package Model ID",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/hotel/api/packageServices/packageModelId/:packageId",
+              "host": [
+                "http://localhost:8080"
+              ],
+              "path": [
+                "hotel",
+                "api",
+                "packageServices",
+                "packageModelId",
+                ":packageId"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Find Package Services By Service Model ID",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/hotel/api/packageServices/serviceModelId/:serviceId",
+              "host": [
+                "http://localhost:8080"
+              ],
+              "path": [
+                "hotel",
+                "api",
+                "packageServices",
+                "serviceModelId",
+                ":serviceId"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Package Service By ID",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/hotel/api/packageServices/:id",
+              "host": [
+                "http://localhost:8080"
+              ],
+              "path": [
+                "hotel",
+                "api",
+                "packageServices",
+                ":id"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Create Package Service",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\"packageName\":\"Premium Package\", \"serviceName\":\"Spa\", \"serviceDetails\":\"Full body massage\"}"
+            },
+            "url": {
+              "raw": "http://localhost:8080/hotel/api/packageServices",
+              "host": [
+                "http://localhost:8080"
+              ],
+              "path": [
+                "hotel",
+                "api",
+                "packageServices"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Update Package Service",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\"packageName\":\"Updated Premium Package\", \"serviceName\":\"Spa\", \"serviceDetails\":\"Deep tissue massage\"}"
+            },
+            "url": {
+              "raw": "http://localhost:8080/hotel/api/packageServices/:id",
+              "host": [
+                "http://localhost:8080"
+              ],
+              "path": [
+                "hotel",
+                "api",
+                "packageServices",
+                ":id"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Delete Package Service",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/hotel/api/packageServices/:id",
+              "host": [
+                "http://localhost:8080"
+              ],
+              "path": [
+                "hotel",
+                "api",
+                "packageServices",
+                ":id"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Patients",
+      "item": [
+        {
+          "name": "Get All Patients",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/hotel/api/patients",
+              "host": [
+                "http://localhost:8080"
+              ],
+              "path": [
+                "hotel",
+                "api",
+                "patients"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Find Patients By First Name",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/hotel/api/patients/firstName/:firstName",
+              "host": [
+                "http://localhost:8080"
+              ],
+              "path": [
+                "hotel",
+                "api",
+                "patients",
+                "firstName",
+                ":firstName"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Find Patients By Last Name",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/hotel/api/patients/lastName/:lastName",
+              "host": [
+                "http://localhost:8080"
+              ],
+              "path": [
+                "hotel",
+                "api",
+                "patients",
+                "lastName",
+                ":lastName"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Find Patients By First Name and Last Name",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/hotel/api/patients/firstName/:firstName/lastName/:lastName",
+              "host": [
+                "http://localhost:8080"
+              ],
+              "path": [
+                "hotel",
+                "api",
+                "patients",
+                "firstName",
+                ":firstName",
+                "lastName",
+                ":lastName"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Patient By ID",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/hotel/api/patients/:id",
+              "host": [
+                "http://localhost:8080"
+              ],
+              "path": [
+                "hotel",
+                "api",
+                "patients",
+                ":id"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Create Patient",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\"firstName\":\"John\", \"lastName\":\"Doe\", \"age\":30, \"email\":\"johndoe@example.com\"}"
+            },
+            "url": {
+              "raw": "http://localhost:8080/hotel/api/patients",
+              "host": [
+                "http://localhost:8080"
+              ],
+              "path": [
+                "hotel",
+                "api",
+                "patients"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Update Patient",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\"firstName\":\"John\", \"lastName\":\"Smith\", \"age\":31, \"email\":\"johnsmith@example.com\"}"
+            },
+            "url": {
+              "raw": "http://localhost:8080/hotel/api/patients/:id",
+              "host": [
+                "http://localhost:8080"
+              ],
+              "path": [
+                "hotel",
+                "api",
+                "patients",
+                ":id"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Delete Patient",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/hotel/api/patients/:id",
+              "host": [
+                "http://localhost:8080"
+              ],
+              "path": [
+                "hotel",
+                "api",
+                "patients",
+                ":id"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Rooms",
+      "item": [
+        {
+          "name": "Get All Rooms",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/hotel/api/rooms",
+              "host": [
+                "http://localhost:8080"
+              ],
+              "path": [
+                "hotel",
+                "api",
+                "rooms"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Find Room By Room Number",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/hotel/api/rooms/roomNumber/:roomNumber",
+              "host": [
+                "http://localhost:8080"
+              ],
+              "path": [
+                "hotel",
+                "api",
+                "rooms",
+                "roomNumber",
+                ":roomNumber"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Find Room By Vacant Status",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/hotel/api/rooms/vacant/:vacant",
+              "host": [
+                "http://localhost:8080"
+              ],
+              "path": [
+                "hotel",
+                "api",
+                "rooms",
+                "vacant",
+                ":vacant"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Find Room By Category ID",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/hotel/api/rooms/category/:categoryId",
+              "host": [
+                "http://localhost:8080"
+              ],
+              "path": [
+                "hotel",
+                "api",
+                "rooms",
+                "category",
+                ":categoryId"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Find Room By Floor",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/hotel/api/rooms/floor/:floor",
+              "host": [
+                "http://localhost:8080"
+              ],
+              "path": [
+                "hotel",
+                "api",
+                "rooms",
+                "floor",
+                ":floor"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Room By ID",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/hotel/api/rooms/:id",
+              "host": [
+                "http://localhost:8080"
+              ],
+              "path": [
+                "hotel",
+                "api",
+                "rooms",
+                ":id"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Create Room",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\"roomNumber\":\"101\", \"vacant\":true, \"categoryId\":1, \"floor\":1}"
+            },
+            "url": {
+              "raw": "http://localhost:8080/hotel/api/rooms",
+              "host": [
+                "http://localhost:8080"
+              ],
+              "path": [
+                "hotel",
+                "api",
+                "rooms"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Update Room",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\"roomNumber\":\"102\", \"vacant\":false, \"categoryId\":2, \"floor\":2}"
+            },
+            "url": {
+              "raw": "http://localhost:8080/hotel/api/rooms/:id",
+              "host": [
+                "http://localhost:8080"
+              ],
+              "path": [
+                "hotel",
+                "api",
+                "rooms",
+                ":id"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Delete Room",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/hotel/api/rooms/:id",
+              "host": [
+                "http://localhost:8080"
+              ],
+              "path": [
+                "hotel",
+                "api",
+                "rooms",
+                ":id"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Services",
+      "item": [
+        {
+          "name": "Get All Services",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/hotel/api/services",
+              "host": [
+                "http://localhost:8080"
+              ],
+              "path": [
+                "hotel",
+                "api",
+                "services"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Find Service By Name",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/hotel/api/services/name/:name",
+              "host": [
+                "http://localhost:8080"
+              ],
+              "path": [
+                "hotel",
+                "api",
+                "services",
+                "name",
+                ":name"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Find Service By Minimum Cost",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/hotel/api/services/minCost/:minCost",
+              "host": [
+                "http://localhost:8080"
+              ],
+              "path": [
+                "hotel",
+                "api",
+                "services",
+                "minCost",
+                ":minCost"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Find Service By Cost Less Than",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/hotel/api/services/costLessThan/:cost",
+              "host": [
+                "http://localhost:8080"
+              ],
+              "path": [
+                "hotel",
+                "api",
+                "services",
+                "costLessThan",
+                ":cost"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Find Service By Name Containing (Ignore Case)",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/hotel/api/services/nameContainingIgnoreCase/:name",
+              "host": [
+                "http://localhost:8080"
+              ],
+              "path": [
+                "hotel",
+                "api",
+                "services",
+                "nameContainingIgnoreCase",
+                ":name"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Service By ID",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/hotel/api/services/:id",
+              "host": [
+                "http://localhost:8080"
+              ],
+              "path": [
+                "hotel",
+                "api",
+                "services",
+                ":id"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Create Service",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\"name\":\"Room Service\", \"minCost\":10.0, \"cost\":20.0}"
+            },
+            "url": {
+              "raw": "http://localhost:8080/hotel/api/services",
+              "host": [
+                "http://localhost:8080"
+              ],
+              "path": [
+                "hotel",
+                "api",
+                "services"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Update Service",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\"name\":\"Room Service Updated\", \"minCost\":12.0, \"cost\":22.0}"
+            },
+            "url": {
+              "raw": "http://localhost:8080/hotel/api/services/:id",
+              "host": [
+                "http://localhost:8080"
+              ],
+              "path": [
+                "hotel",
+                "api",
+                "services",
+                ":id"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Delete Service",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/hotel/api/services/:id",
+              "host": [
+                "http://localhost:8080"
+              ],
+              "path": [
+                "hotel",
+                "api",
+                "services",
+                ":id"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    }
+  ]
+}
