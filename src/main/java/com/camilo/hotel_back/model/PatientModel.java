@@ -1,6 +1,7 @@
 package com.camilo.hotel_back.model;
 
 import jakarta.persistence.*;
+import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
 import lombok.*;
@@ -52,6 +53,7 @@ public class PatientModel {
     @Column(name = "pt_phone_number")
     private String phoneNumber;
 
+    @Email
     @Size(max = 100)
     @Column(name = "pt_email")
     private String email;
