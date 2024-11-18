@@ -22,11 +22,11 @@ public class GuestModel {
     @Column(name = "gt_id")
     private Long id;
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne
     @JoinColumn(name = "gt_pt_id", referencedColumnName = "pt_id", nullable = false)
     private PatientModel patient;
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne
     @JoinColumn(name = "gt_rm_id", referencedColumnName = "rm_id", nullable = false)
     private RoomModel room;
 

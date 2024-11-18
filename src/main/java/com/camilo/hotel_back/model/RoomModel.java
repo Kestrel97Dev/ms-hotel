@@ -21,7 +21,7 @@ public class RoomModel {
     @Column(name = "rm_id")
     private Long id;
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne
     @JoinColumn(name = "rm_ct_id", referencedColumnName = "ct_id", nullable = false)
     private CategoryModel category;
 

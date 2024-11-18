@@ -19,11 +19,11 @@ public class PackageServiceModel {
     @Column(name = "pksv_id")
     private Long id;
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne
     @JoinColumn(name = "pksv_pk_id", referencedColumnName = "pk_id", nullable = false)
     private PackageModel packageModel;
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne
     @JoinColumn(name = "pksv_sv_id", referencedColumnName = "sv_id", nullable = false)
     private ServiceModel serviceModel;
 }
